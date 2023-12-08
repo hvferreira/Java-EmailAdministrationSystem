@@ -90,4 +90,14 @@ public class Email {
             }
         } while (!bool);
     }
+
+
+    public void setMailCapacity(int mailCapacity) {
+        System.out.println("Current capacity = " + this.mailCapacity + "mb");
+        System.out.print("Enter new capacity: ");
+        this.mailCapacity = sc.nextInt();
+        System.out.println("MAILBOX CAPACITY CHANGED SUCCESSFULLY!");
+    }
+
+
 }
