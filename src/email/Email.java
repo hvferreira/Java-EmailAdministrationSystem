@@ -66,5 +66,28 @@ public class Email {
         return password;
     }
 
-
+    public void set_password() {
+        boolean bool = false;
+        do {
+            System.out.print("ARE YOU SURE YOU WANT TO CHANGE YOUR PASSWORD? (Y/N) : ");
+            char choice = sc.next().charAt(0);
+            if (choice == 'Y' || choice == 'y') {
+                bool = true;
+                System.out.print("Enter current password: ");
+                String temp = sc.next();
+                if (temp.equals(this.password)) {
+                    System.out.println("Enter new password: ");
+                    this.password = s.next();
+                    System.out.println("PASSWORD CHANGED SUCCESSFULLY!");
+                } else {
+                    System.out.println("Incorrect Password!");
+                }
+            } else if (choice == 'N' || choice == 'n') {
+                bool = true;
+                System.out.println("PASSWORD CHANGE CANCELED!");
+            } else {
+                System.out.println("**ENTER A VALID CHOICE**");
+            }
+        } while (!bool);
+    }
 }
