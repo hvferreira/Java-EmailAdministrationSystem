@@ -1,5 +1,6 @@
 package email;
 
+import java.util.Random;
 import java.util.Scanner;
 import java.util.stream.StreamSupport;
 
@@ -48,4 +49,22 @@ public class Email {
         } while (!bool);
         return null;
     }
+
+    private String generate_password(int length) {
+        Random r = new Random();
+
+        String capitalChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String smallChars = "abcdefghijklmnopqrstuvwxyz";
+        String numbers = "0123456789";
+        String symbols = "!@#$%&?";
+        String values = capitalChar + smallChars + numbers + symbols;
+
+        String password = "";
+        for (int i = 0; i < length; i++) {
+            password = password + values.charAt(r.nextInt(values.length()));
+        }
+        return password;
+    }
+
+
 }
