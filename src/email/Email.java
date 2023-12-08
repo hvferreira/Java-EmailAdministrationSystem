@@ -1,5 +1,6 @@
 package email;
 
+import java.io.FileWriter;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.stream.StreamSupport;
@@ -21,6 +22,10 @@ public class Email {
         this.firstName = firstName;
         this.lastName = lastName;
         System.out.println("New Employee:"+this.firstName+""+this.lastName);
+
+        this.department = this.setDepartment();
+        this.password = this.generate_password(8);
+        this.email = this.generate_email();
     }
     private String generate_email() {
         return this.firstName.toLowerCase() + "." + this.lastName.toLowerCase() + "@" + this.department.toLowerCase()
@@ -104,6 +109,15 @@ public class Email {
         this.alternativeEmail = sc.next();
         System.out.println("ALTERNATE EMAIL SET SUCCESSFULLY!");
 
+    }
+
+    public void getInfo() {
+        System.out.println("NAME: " + this.firstName + " " + this.lastName);
+        System.out.println("DEPARTMENT: " + this.department);
+        System.out.println("EMAIL: " + this.email);
+        System.out.println("PASSWORD: " + this.password);
+        System.out.println("MAILBOX CAPACITY: " + this.mailCapacity + "mb");
+        System.out.println("ALTER EMAIL: " + this.alternativeEmail);
     }
 
 
