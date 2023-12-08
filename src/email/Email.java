@@ -99,5 +99,13 @@ public class Email {
         System.out.println("MAILBOX CAPACITY CHANGED SUCCESSFULLY!");
     }
 
+    public void setAlternativeEmail(String alternativeEmail) {
+        System.out.print("Enter new alternate email: ");
+        this.alternativeEmail = sc.next();
+        System.out.println("ALTERNATE EMAIL SET SUCCESSFULLY!");
+
+    }
+
+
 
 }
