@@ -82,7 +82,7 @@ public class Email {
                 String temp = sc.next();
                 if (temp.equals(this.password)) {
                     System.out.println("Enter new password: ");
-                    this.password = s.next();
+                    this.password = sc.next();
                     System.out.println("PASSWORD CHANGED SUCCESSFULLY!");
                 } else {
                     System.out.println("Incorrect Password!");
@@ -97,14 +97,14 @@ public class Email {
     }
 
 
-    public void setMailCapacity(int mailCapacity) {
+    public void setMailCapacity() {
         System.out.println("Current capacity = " + this.mailCapacity + "mb");
         System.out.print("Enter new capacity: ");
         this.mailCapacity = sc.nextInt();
         System.out.println("MAILBOX CAPACITY CHANGED SUCCESSFULLY!");
     }
 
-    public void setAlternativeEmail(String alternativeEmail) {
+    public void setAlternativeEmail() {
         System.out.print("Enter new alternate email: ");
         this.alternativeEmail = sc.next();
         System.out.println("ALTERNATE EMAIL SET SUCCESSFULLY!");
